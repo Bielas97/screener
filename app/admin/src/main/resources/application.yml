@@ -1,0 +1,7 @@
+spring:
+  webflux:
+    base-path: /api
+
+yodeck:
+  base-url: "${YODECK_BASE_URL:https://app.yodeck.com/api/v2/}"
+  token: "${YODECK_TOKEN:yodeck:kNULVUNBmOMGA1VMZMmVeEm9OfrlynFLbxjtawdovKdNeS2QoPDvmHcoPXbjYYPk}"

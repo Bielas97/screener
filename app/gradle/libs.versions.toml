@@ -1,0 +1,34 @@
+[versions]
+kotlin = "2.1.21"
+springBoot = "3.5.0"
+springBootDependencyManagement = "1.1.7"
+spotless = "7.0.4"
+testLogger = "4.0.0"
+kotlinxCoroutinesSlf4j = "1.10.2"
+logback = "0.1.5"
+kotlinLogging = "3.0.5"
+logstashLogback = "8.1"
+jacksonModuleKotlin = "2.19.+"
+springDoc = "2.8.8"
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+spring-boot-dependency-management = { id = "io.spring.dependency-management", version.ref = "springBootDependencyManagement" }
+
+[libraries]
+kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlin-allopen = { group = "org.jetbrains.kotlin", name = "kotlin-allopen", version.ref = "kotlin" }
+kotlin-serialization = { group = "org.jetbrains.kotlin", name = "kotlin-serialization", version.ref = "kotlin" }
+spring-boot-gradle-plugin = { group = "org.springframework.boot", name = "spring-boot-gradle-plugin", version.ref = "springBoot" }
+spring-starter-webflux = {group = "org.springframework.boot", name = "spring-boot-starter-webflux", version.ref = "springBoot"}
+dependency-management-plugin = { group = "io.spring.gradle", name = "dependency-management-plugin", version.ref = "springBootDependencyManagement" }
+spotless = { group = "com.diffplug.spotless", name = "spotless-plugin-gradle", version.ref = "spotless" }
+test-logger = { group = "com.adarshr.test-logger", name = "com.adarshr.test-logger.gradle.plugin", version.ref = "testLogger" }
+kotlinx-coroutines-slf4j = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-slf4j", version.ref = "kotlinxCoroutinesSlf4j" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesSlf4j" }
+kotlinx-coroutines-reactor = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-reactor", version.ref = "kotlinxCoroutinesSlf4j" }
+logback-json-classic = { group = "ch.qos.logback.contrib", name = "logback-json-classic", version.ref = "logback" }
+kotlin-logging-jvm = { group = "io.github.microutils", name = "kotlin-logging-jvm", version.ref = "kotlinLogging" }
+logstash-logback-encoder = { group = "net.logstash.logback", name = "logstash-logback-encoder", version.ref = "logstashLogback" }
+jackson-module-kotlin = { group = "com.fasterxml.jackson.module", name = "jackson-module-kotlin", version.ref = "jacksonModuleKotlin"}
+springdoc-ui = { group = "org.springdoc", name = "springdoc-openapi-starter-webflux-ui", version.ref = "springDoc" }

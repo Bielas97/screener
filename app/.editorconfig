@@ -1,0 +1,8 @@
+root = true
+
+[*.{kt,kts}]
+# This produces errors regarding with const written with lowercase disabled to not pollute when performing initial
+# reformat, can be enabled after that
+ktlint_standard_property-naming = disabled
+ktlint_standard_no-wildcard-imports = disabled
+ktlint_standard_filename = disabled

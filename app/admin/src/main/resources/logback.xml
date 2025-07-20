@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <springProfile name="local|test">
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <layout class="ch.qos.logback.classic.PatternLayout">
+                <Pattern>%magenta(%d{yyyy-MM-dd HH:mm:ss.SSS}) %yellow([%thread]) %blue([%mdc]) %green(%-5level) %cyan(%logger{36}) %msg%n
+                </Pattern>
+            </layout>
+        </appender>
+    </springProfile>
+
+    <springProfile name="!(local|test)">
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
+        </appender>
+    </springProfile>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <logger name="com.screener" level="${APP_LOG_LEVEL:-DEBUG}"/>
+</configuration>
