@@ -18,8 +18,3 @@ class HttpYodeckMediaService(clientBuilder: WebClient.Builder, yodeckProperties:
         logger.info { "Media displayed successfully: $result" }
     }
 }
-
-@Service
-internal class CustomService() {
-    fun hello(): String = "asdasdasd";
-}
