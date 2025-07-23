@@ -20,3 +20,7 @@ dependencies {
 task("buildFatJar") {
     dependsOn("bootJar")
 }
+
+tasks.getByName<Jar>("jar") {
+    enabled = false
+}
